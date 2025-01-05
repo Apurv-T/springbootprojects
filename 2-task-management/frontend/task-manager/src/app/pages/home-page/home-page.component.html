@@ -1,0 +1,19 @@
+<button class="fetch-button" (click)="fetchTasks()">Fetch Tasks</button>
+<div class="home-page">
+    <div class="tasks">
+        <div class="tasks-box active-tasks">
+            <div *ngFor="let task of pendingTasks; let index=index"> <app-task [task]="task" [id]="index"></app-task>
+            </div>
+
+        </div>
+        <div class="tasks-box expired-tasks">
+            <div *ngFor="let task of completedTasks; let index=index"> <app-task [task]="task" [id]="index"></app-task>
+            </div>
+
+        </div>
+    </div>
+    <div class="create-box">
+        <div class="tasks-box new-task"></div>
+
+    </div>
+</div>

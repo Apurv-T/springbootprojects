@@ -1,0 +1,35 @@
+.home-page {
+  display: flex;
+  flex-direction: row;
+  margin: 5rem auto;
+  justify-content: center;
+  .tasks {
+    display: flex;
+    flex-direction: column;
+  }
+  .tasks-box {
+    min-width: 15rem;
+    min-height: 10rem;
+    border: 2px black solid;
+    border-radius: 1.4rem;
+    margin: 1rem;
+    max-height: 50rem;
+    overflow: auto;
+
+    &.active-tasks {
+      background-color: rgba(0, 128, 0, 0.247);
+    }
+    &.expired-tasks {
+      background-color: rgba(128, 128, 128, 0.267);
+    }
+    &.new-task {
+      background-color: rgba(0, 128, 128, 0.188);
+    }
+  }
+}
+.fetch-button {
+  border: 1px solid black;
+  background: none;
+  color: black;
+  font-size: 1.2rem;
+}

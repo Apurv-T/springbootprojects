@@ -1,0 +1,16 @@
+<div class="task">
+    <div class="details">
+        <p><strong> {{task.name}}</strong></p>
+        <p>{{task.description}}</p>
+    </div>
+
+    <div class="owner-details">
+        <p>By: {{task.owner}}</p>
+        <p>Expiring On: {{task.endDate | date: 'dd/MM/yyyy'}} </p>
+    </div>
+    <div class="buttons">
+        <button class="remove" (click)="remove()">X</button>
+        <button class="done" (click)="complete()">Done</button>
+    </div>
+
+</div>
